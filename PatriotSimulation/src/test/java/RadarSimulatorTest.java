@@ -34,7 +34,5 @@ public class RadarSimulatorTest {
 		assertThrows(NullPointerException.class, () -> {
 			rs.hasNext();
 		});
-
 	}
-
 }
