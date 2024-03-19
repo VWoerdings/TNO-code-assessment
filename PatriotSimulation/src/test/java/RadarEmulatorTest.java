@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import main.java.RadarEmulator;
 
-public class RadarSimulatorTest {
+public class RadarEmulatorTest {
 
 	@Test
 	void testReadDataException() {
