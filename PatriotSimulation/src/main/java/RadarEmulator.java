@@ -6,12 +6,12 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.List;
 
-public class RadarSimulator implements Iterator<String> {
+public class RadarEmulator implements Iterator<String> {
 	private String data_file;
 	private List<String> data;
 	private Iterator<String> iterator;
 
-	public RadarSimulator(String data_file) {
+	public RadarEmulator(String data_file) {
 		this.data_file = data_file;
 	}
 

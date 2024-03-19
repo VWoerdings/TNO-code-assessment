@@ -7,7 +7,7 @@ public class Simulation {
 
 	public static void main(String[] args) throws IOException {
 		String csvPath = new File("src/main/resources/radar_data.csv").getAbsolutePath();
-		RadarSimulator rs = new RadarSimulator(csvPath);
+		RadarEmulator rs = new RadarEmulator(csvPath);
 		rs.readData();
 		MissileLauncher ml = new MissileLauncher();
 
