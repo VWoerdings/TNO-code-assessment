@@ -7,14 +7,14 @@ public class Simulation {
 
 	public static void main(String[] args) throws IOException {
 		String csvPath = new File("src/main/resources/radar_data.csv").getAbsolutePath();
-		RadarEmulator rs = new RadarEmulator(csvPath);
-		rs.readData();
+		RadarEmulator re = new RadarEmulator(csvPath);
+		re.readData();
 		MissileLauncher ml = new MissileLauncher();
 
 		int time = 0;
-		while (rs.hasNext()) {
+		while (re.hasNext()) {
 			System.out.printf("Simulation time: %ds\n", time);
-			if (IFF.detectFoe(IFF.parseRadarString(rs.next()))) {
+			if (IFF.detectFoe(IFF.parseRadarString(re.next()))) {
 				System.out.println("Foe detected");
 				ml.launchMissile();
 			} else {
