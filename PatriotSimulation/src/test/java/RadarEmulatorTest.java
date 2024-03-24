@@ -14,25 +14,25 @@ public class RadarEmulatorTest {
 
 	@Test
 	void testReadDataException() {
-		RadarEmulator rs = new RadarEmulator("file/does/not/exist");
+		RadarEmulator re = new RadarEmulator("file/does/not/exist");
 
 		assertThrows(IOException.class, () -> {
-			rs.readData();
+			re.readData();
 		});
 	}
 
 	@Test
 	void testReadData() throws IOException {
-		RadarEmulator rs = new RadarEmulator("src/test/resources/test_input.csv");
-		rs.readData();
-		assertEquals(rs.getData(), Arrays.asList("0001010", "0111000", "1101001"));
+		RadarEmulator re = new RadarEmulator("src/test/resources/test_input.csv");
+		re.readData();
+		assertEquals(re.getData(), Arrays.asList("0001010", "0111000", "1101001"));
 	}
 
 	@Test
 	void testHasNext() {
-		RadarEmulator rs = new RadarEmulator("src/test/resources/test_input.csv");
+		RadarEmulator re = new RadarEmulator("src/test/resources/test_input.csv");
 		assertThrows(NullPointerException.class, () -> {
-			rs.hasNext();
+			re.hasNext();
 		});
 	}
 }
